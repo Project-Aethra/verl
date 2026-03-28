@@ -13,7 +13,7 @@ permissions:
 jobs:
   precommit:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
 
     steps:
       - name: Checkout repository

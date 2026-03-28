@@ -68,7 +68,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -172,7 +172,7 @@ jobs:
           pytest -s -x tests/models/test_engine.py
 
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     needs: [setup, model_rmpad, model_rmpad_fsdp2_unstable, model_engine]
     if: always()
     steps:

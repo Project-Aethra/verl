@@ -99,7 +99,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -275,7 +275,7 @@ jobs:
           rm -rf checkpoints
 
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     needs: [setup, trtllm_unit_tests, e2e_grpo_trainer_fsdp-qwen2, e2e_grpo_trainer_megatron-qwen2, e2e_grpo_trainer_fsdp-vlm]
     if: always()
     steps:

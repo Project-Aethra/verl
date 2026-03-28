@@ -81,7 +81,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -153,7 +153,7 @@ jobs:
           ROLLOUT_NAME=sglang pytest -svvv tests/checkpoint_engine/test_special_server_adapter.py
 
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     needs: [setup, sgl, sgl_checkpoint_engine]
     if: always()
     steps:

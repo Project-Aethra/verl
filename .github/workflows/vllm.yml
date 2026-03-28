@@ -78,7 +78,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -157,7 +157,7 @@ jobs:
           pytest -svvv tests/utils/test_bucketed_weight_transfer.py
 
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     needs: [setup, vllm, vllm_checkpoint_engine]
     if: always()
     steps:

@@ -87,7 +87,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -137,7 +137,7 @@ jobs:
           MODEL_ID=Qwen/Qwen3-VL-2B-Instruct TRAIN_FILES=${HOME}/data/geo3k/train.parquet VAL_FILES=${HOME}/data/gsm8k/test.parquet FSDP_SIZE=8 SP_SIZE=1 bash tests/special_e2e/run_ppo_trainer_veomni.sh
 
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     needs:
       [
         setup,

@@ -15,7 +15,7 @@ on:
 jobs:
   build-ascend-image-a2:
     if: ${{ github.event_name != 'pull_request' && github.repository_owner == 'verl-project' }}
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-build-ascend-image-a2
       cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}

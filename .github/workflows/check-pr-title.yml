@@ -36,7 +36,7 @@ on:
 
 jobs:
   check-title:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

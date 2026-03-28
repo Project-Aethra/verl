@@ -86,7 +86,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -158,7 +158,7 @@ jobs:
           bash tests/special_e2e/run_one_step_off_policy.sh
 
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
     needs:
       [setup, e2e_one_step_off_policy_fsdp2, e2e_one_step_off_policy_megatron]
     if: always()
