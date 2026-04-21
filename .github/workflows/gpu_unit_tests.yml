@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # # Tests layout
 
 # Each folder under tests/ corresponds to a test category for a sub-namespace in verl. For instance:
@@ -77,6 +78,7 @@ jobs:
   setup:
     if: github.repository_owner == 'verl-project'
     runs-on: magnon-enterprise-runners
+    timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -126,6 +128,7 @@ jobs:
 
   cleanup:
     runs-on: magnon-enterprise-runners
+    timeout-minutes: 30
     needs: [setup, gpu_unit_tests]
     if: always()
     steps:

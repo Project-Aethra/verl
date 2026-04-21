@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 name: scheduled pre-commit autofix
 
 on:
@@ -14,6 +15,7 @@ jobs:
   precommit:
     if: github.repository_owner == 'verl-project'
     runs-on: magnon-enterprise-runners
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repository

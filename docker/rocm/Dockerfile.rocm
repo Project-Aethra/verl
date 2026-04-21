@@ -311,6 +311,10 @@ WORKDIR /workspace/
 RUN git clone https://github.com/volcengine/verl.git && \
     cd verl && \
     pip install -e . 
+
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot
 ##########################################
 ##########################################
 ##########################################

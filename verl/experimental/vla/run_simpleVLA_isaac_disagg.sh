@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 echo "remember to set ray param < --resources='{\"sim\"/\"actor_rollout\":1}' > if using disagg sim"
@@ -106,5 +107,4 @@ $PYTHON -m verl.experimental.vla.main_ppo \
     trainer.total_training_steps=10000 \
     algorithm.adv_estimator=reinforce_plus_plus \
     trainer.val_before_train=False  $@
-
 

@@ -65,5 +65,9 @@ RUN git clone --recursive https://github.com/volcengine/verl.git && \
 # Show install results
 RUN pip list
 
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot
+
 # Setting Default Commands
 CMD ["/bin/bash"]

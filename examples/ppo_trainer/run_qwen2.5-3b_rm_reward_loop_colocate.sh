@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # download datasets and models
 # python3 examples/data_preprocess/gsm8k.py
 # python3 examples/data_preprocess/math_dataset.py

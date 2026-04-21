@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # -*- coding: utf-8 -*-
 export CUDA_VISIBLE_DEVICES=4
 NOW=$(date +%Y%m%d)

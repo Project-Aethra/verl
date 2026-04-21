@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # run Qwen3-30B-A3B-Base on dapo-math-17k dataset
 set -x
 

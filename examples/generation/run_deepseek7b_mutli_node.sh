@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 data_path=$HOME/data/rlhf/gsm8k/test.parquet

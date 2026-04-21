@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -xeuo pipefail
 
 project_name='GRPO'

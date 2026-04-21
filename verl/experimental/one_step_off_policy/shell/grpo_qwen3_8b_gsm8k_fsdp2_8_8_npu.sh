@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # The script has been validated on the Ascend Atlas 800T A3.
 set -x
 

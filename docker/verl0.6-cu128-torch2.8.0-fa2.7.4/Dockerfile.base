@@ -106,3 +106,7 @@ RUN git clone -b core_v0.13.0 https://github.com/NVIDIA/Megatron-LM.git && \
 
 # Install mbridge
 RUN pip3 install --no-cache-dir git+https://github.com/ISEEKYAN/mbridge.git
+
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot

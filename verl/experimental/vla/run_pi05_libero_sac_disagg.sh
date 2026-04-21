@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 libero_train_path=$HOME/data/libero_rl/train.parquet
 libero_test_path=$HOME/data/libero_rl/test.parquet

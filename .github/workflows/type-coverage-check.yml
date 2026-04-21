@@ -1,4 +1,8 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 name: Type Annotation and Docstring Coverage
+
+permissions:
+  contents: read
 
 on:
   pull_request:
@@ -6,9 +10,14 @@ on:
       - '**/*.py'
       - '.github/workflows/type-coverage-check.yml'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   type-coverage-check:
     runs-on: magnon-enterprise-runners
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:

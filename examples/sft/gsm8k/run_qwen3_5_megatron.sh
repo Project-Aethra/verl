@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # Qwen3.5-397B-A17B SFT with Megatron backend + mbridge
 #
 # Requirements:

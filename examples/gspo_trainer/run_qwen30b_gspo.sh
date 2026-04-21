@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # run Qwen3-30B GSPO with new model engine
 set -x
 

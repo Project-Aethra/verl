@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # # Tests layout
 
 # Each folder under tests/ corresponds to a test category for a sub-namespace in verl. For instance:
@@ -64,6 +65,7 @@ jobs:
     runs-on: magnon-enterprise-runners
     timeout-minutes: 5 # Increase this timeout value as needed
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.10"]
     steps:

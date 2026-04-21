@@ -303,7 +303,7 @@ def _load_sglang():
     os.environ["SGLANG_USE_CPU_ENGINE"] = "1"
 
     try:
-        import vllm  # noqa: F401
+        import vllm
     except ImportError:
         import sys
         import types

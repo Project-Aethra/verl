@@ -50,6 +50,10 @@ ENV OMPI_MCA_pml=^cm,ucx            \
     NCCL_SOCKET_IFNAME=^docker,lo,veth_def_agent  \
     FI_EFA_USE_HUGE_PAGE=0
 
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot
+
 # docker build -t verl:awsefa --label "commit=$(git rev-parse --short HEAD)" .
 # on aws:
 # docker run --ipc=host --privileged --name verldev --gpus all --network=host --shm-size=1800gb -itd verl:awsefa

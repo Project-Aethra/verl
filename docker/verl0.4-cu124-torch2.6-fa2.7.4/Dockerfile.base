@@ -111,3 +111,7 @@ RUN pip config unset global.index-url && \
 RUN apt-get update && \
     apt-get install -y libfreeimage3 libfreeimage-dev zlib1g htop
 
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot
+

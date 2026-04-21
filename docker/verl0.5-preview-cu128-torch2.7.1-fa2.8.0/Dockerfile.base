@@ -89,3 +89,7 @@ RUN pip install --resume-retries 999 --no-cache-dir "tensordict==0.6.2" torchdat
 RUN pip config unset global.index-url && \
     pip config unset global.extra-index-url
 
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot
+

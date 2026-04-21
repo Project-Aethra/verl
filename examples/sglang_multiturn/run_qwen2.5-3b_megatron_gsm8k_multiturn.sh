@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # run on 8xH100
 # make sure your current working directory is the root of the project
 # this is a verification training script, the parallel setting should be tuned to your model
@@ -61,4 +62,3 @@ python3 -m verl.trainer.main_ppo \
     data.val_files=/user/longxiang1/data/gsm8k_verl_sgl_multi_turn_preprocessed_v2/test.parquet \
     actor_rollout_ref.rollout.multi_turn.tool_config_path="$PROJECT_DIR/examples/sglang_multiturn/config/tool_config/gsm8k_tool_config.yaml" \
     trainer.total_epochs=15 $@
-

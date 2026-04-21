@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 #
 #  An e2e test script for testing the GRPO LoRA training process 
 #  and processing the generated checkpoint using the merge_model.py script.  

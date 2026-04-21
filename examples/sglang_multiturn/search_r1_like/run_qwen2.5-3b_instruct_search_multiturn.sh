@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # run on 8xH20
 # make sure your current working directory is the root of the project
 
@@ -63,4 +64,3 @@ python3 -m verl.trainer.main_ppo \
     data.val_files="$VAL_DATA"  \
     actor_rollout_ref.rollout.multi_turn.tool_config_path="$TOOL_CONFIG" \
     trainer.total_epochs=1 $@
-

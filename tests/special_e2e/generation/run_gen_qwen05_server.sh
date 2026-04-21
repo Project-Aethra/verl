@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # Tested with 1 & 4 GPUs
 set -xeuo pipefail
 

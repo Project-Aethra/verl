@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # Example: RLOO (REINFORCE Leave-One-Out) with Rollout Correction
 # This demonstrates self-normalized sequence-level IS with pure policy gradient
 #

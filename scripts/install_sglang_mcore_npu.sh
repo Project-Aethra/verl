@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -e
 NPU_DEVICE=${NPU_DEVICE:=A3}
 USE_MEGATRON=${USE_MEGATRON:-1}
