@@ -66,7 +66,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
@@ -124,7 +124,7 @@ jobs:
           ROLLOUT_NAME=sglang pytest -s -x tests/experimental/reward_loop/test_agent_reward_loop_colocate.py
 
   cleanup:
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     needs: [setup, reward_model_sglang]
     if: always()

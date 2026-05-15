@@ -87,7 +87,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
@@ -160,7 +160,7 @@ jobs:
           bash tests/special_e2e/run_one_step_off_policy.sh
 
   cleanup:
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     needs:
       [setup, e2e_one_step_off_policy_fsdp2, e2e_one_step_off_policy_megatron]
