@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 # tested in NNODES=1~4 * 96G H20 GPU

@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 # Clean all slurm / MPI / PMIx env to avoid pmix mismatch error

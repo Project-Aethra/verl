@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # run on 4xH100
 # make sure your current working directory is the root of the project
 

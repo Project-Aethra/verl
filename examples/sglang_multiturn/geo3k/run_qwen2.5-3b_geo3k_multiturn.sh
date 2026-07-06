@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # run on 8xH100
 # make sure your current working directory is the root of the project
 
@@ -51,4 +52,3 @@ python3 -m verl.trainer.main_ppo \
     data.val_files=$HOME/data/geo3k_multiturn_w_tool/test.parquet \
     actor_rollout_ref.rollout.multi_turn.tool_config_path="$PROJECT_DIR/examples/sglang_multiturn/config/tool_config/geo3k_tool_config.yaml" \
     trainer.total_epochs=15 $@
-

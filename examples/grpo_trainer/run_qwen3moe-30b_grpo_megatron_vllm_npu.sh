@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -xeuo pipefail
 mkdir -p logs
 

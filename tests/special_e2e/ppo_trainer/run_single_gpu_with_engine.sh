@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 PYTHONUNBUFFERED=1 python3 -m verl.trainer.main_ppo \
   data.train_files=$HOME/data/gsm8k/train.parquet \
   data.val_files=$HOME/data/gsm8k/test.parquet \

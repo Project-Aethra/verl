@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # python examples/data_preprocess/pokemon.py
 set -xeuo pipefail
 

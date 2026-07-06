@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # run on Ascend 910
 # make sure your current working directory is the root of the project
 

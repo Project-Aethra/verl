@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 lora_adapter_path=${lora_adapter_path:-/path/saved/lora_adapter}

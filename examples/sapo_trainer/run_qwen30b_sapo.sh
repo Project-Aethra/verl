@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 #SBATCH --job-name=sapo-30B
 #SBATCH --partition=main
 #SBATCH --nodes=1                # Number of nodes

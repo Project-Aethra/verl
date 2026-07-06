@@ -16,15 +16,27 @@ Reference paper: HybridFlow (EuroSys 2025). Upstream: ByteDance Seed team.
 - Python · PyTorch
 - Ray (distributed training)
 - vLLM / SGLang inference backends
+- FastAPI (service endpoints)
 
 ## Dev commands
 
 ```bash
 pip install -e .
+# Or, to include dev dependencies:
+pip install -e '.[dev]'
 # See docs/ and upstream README for full setup
+
+# Run development server
+python -m <module>
 
 # Run with Docker
 docker-compose up
+```
+
+## Testing
+
+```bash
+pytest
 ```
 
 ## Key conventions

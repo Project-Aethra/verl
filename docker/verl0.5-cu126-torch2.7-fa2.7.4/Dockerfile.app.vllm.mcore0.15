@@ -37,3 +37,6 @@ RUN pip3 install --no-cache-dir mbridge==v0.15.0
 
 # Fix qwen vl
 RUN pip3 install --no-cache-dir --no-deps trl
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot

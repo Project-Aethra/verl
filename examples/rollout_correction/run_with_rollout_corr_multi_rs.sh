@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # Example: PPO-clip with Rollout Correction using multiple RS criteria
 # Demonstrates chaining token-level and sequence-level rejection sampling
 # (token_k1 + seq_max_k2) alongside optional IS metrics.

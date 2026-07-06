@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 #SBATCH --job-name=rl-gspo-3B
 #SBATCH --partition=main
 #SBATCH --nodes=1                # Number of nodes

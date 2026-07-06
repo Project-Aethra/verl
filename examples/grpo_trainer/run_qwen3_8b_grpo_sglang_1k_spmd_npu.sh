@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 export HCCL_CONNECT_TIMEOUT=1500
 export HCCL_HOST_SOCKET_PORT_RANGE=60000-60050

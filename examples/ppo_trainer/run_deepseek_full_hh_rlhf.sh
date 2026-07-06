@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 train_files=$HOME/data/full_hh_rlhf/rl/train.parquet

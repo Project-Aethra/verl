@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 train_files=data/full_hh_rlhf/rl/train.parquet
 test_files=data/full_hh_rlhf/rl/train.parquet # no use
 

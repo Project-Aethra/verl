@@ -1,3 +1,5 @@
+// Copyright (c) 2024-2026 Magnon Compute Corporation. All Rights Reserved.
+
 // Resizable sidebar functionality
 document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.querySelector('.wy-nav-side');

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -xeuo pipefail
 ################################################### environment ###################################################
 ### # 1. use docker image `verlai/verl:vllm015.dev`` and install correct dependencies:

@@ -25,7 +25,7 @@ import torch.distributed as dist
 
 try:
     # NPU patch
-    import mindspeed.megatron_adaptor  # noqa: F401
+    import mindspeed.megatron_adaptor
 except ImportError:
     pass
 

@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -euxo pipefail
 
 ulimit -n 32768

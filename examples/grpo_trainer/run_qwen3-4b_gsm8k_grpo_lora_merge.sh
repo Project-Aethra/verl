@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 # initial "val-core/openai/gsm8k/acc/mean@1":0.378316906747536
@@ -68,4 +69,3 @@ python3 -m verl.trainer.main_ppo \
     trainer.test_freq=5 \
     trainer.total_epochs=1 \
     2>&1 | tee $train_dir/train_log.txt
-

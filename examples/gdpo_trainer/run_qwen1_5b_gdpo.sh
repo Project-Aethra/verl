@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 export HCCL_ASYNC_ERROR_HANDLING=0
 
 export DATA_DIR="./dataset/rlla_4k"

@@ -67,3 +67,6 @@ RUN pip install --no-deps --no-cache-dir git+https://github.com/NVIDIA/Megatron-
 RUN pip install git+https://github.com/volcengine/verl.git@v0.6.1
 
 RUN pip uninstall -y verl
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot

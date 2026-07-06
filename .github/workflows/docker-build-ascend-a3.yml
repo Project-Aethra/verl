@@ -1,4 +1,8 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 name: docker-build-ascend-a3
+
+permissions:
+  contents: read
 
 on:
   workflow_dispatch:
@@ -12,10 +16,15 @@ on:
   schedule:
     - cron: "0 19 * * *"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-ascend-image-a3:
     if: ${{ github.event_name != 'pull_request' && github.repository_owner == 'verl-project' }}
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
+    timeout-minutes: 60
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-build-ascend-image-a3
       cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}

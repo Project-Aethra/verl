@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -xeuo pipefail
 mkdir -p logs
 ulimit -n 32768

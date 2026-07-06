@@ -86,3 +86,6 @@ ENV PATH=$NVSHMEM_DIR/bin:$PATH
 ## Build deepep
 RUN cd DeepEP && \
     python setup.py install
+RUN addgroup --system --gid 65532 nonroot && \
+    adduser --system --uid 65532 --gid 65532 --no-create-home nonroot
+USER nonroot

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -xeuo pipefail
 
 # Test script for fully_async_policy E2E regression testing
@@ -199,4 +200,3 @@ else
 fi
 
 echo "Fully async policy E2E test completed successfully with ${ACTOR_STRATEGY} strategy"
-

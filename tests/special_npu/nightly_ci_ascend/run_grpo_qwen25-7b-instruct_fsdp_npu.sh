@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 # Some models are optimized by vllm ascend. While in some case, e.g. rlhf training, 

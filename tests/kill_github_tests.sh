@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 YOUR_GITHUB_TOKEN"

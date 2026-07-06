@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # # Tests layout
 
 # Each folder under tests/ corresponds to a test category for a sub-namespace in verl. For instance:
@@ -75,7 +76,8 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
+    timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -116,7 +118,8 @@ jobs:
           MODEL_ID=Qwen/Qwen3-VL-2B-Instruct DATASET_DIR=~/data/pokemon-gpt4o-captions VPP_SIZE=null bash tests/special_e2e/sft/test_sft_engine_all.sh
 
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
+    timeout-minutes: 30
     needs: [setup, e2e_sft_vlm]
     if: always()
     steps:

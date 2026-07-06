@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 # python examples/data_preprocess/geo3k.py --local_dir ~/data/geo3k

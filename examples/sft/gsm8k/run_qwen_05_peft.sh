@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # Tested with 2 & 4 GPUs
 
 set -x

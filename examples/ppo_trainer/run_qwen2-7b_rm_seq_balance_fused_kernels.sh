@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 gsm8k_train_path=$HOME/data/gsm8k/train.parquet

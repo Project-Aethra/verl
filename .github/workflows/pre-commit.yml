@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # c.f. https://github.com/pre-commit/action?tab=readme-ov-file#using-this-action
 name: pre-commit
 
@@ -13,14 +14,20 @@ on:
   # Allow manual triggering
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # Declare permissions just read content.
 permissions:
   contents: read
 
 jobs:
   pre-commit:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
+    timeout-minutes: 30
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.12"]
     steps:

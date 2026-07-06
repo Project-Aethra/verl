@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 libero_train_path=$HOME/data/libero_rl/train.parquet
 libero_test_path=$HOME/data/libero_rl/test.parquet
@@ -99,5 +100,4 @@ $PYTHON -m verl.experimental.vla.main_ppo \
     trainer.total_training_steps=10000 \
     algorithm.adv_estimator=reinforce_plus_plus \
     trainer.val_before_train=False  $@
-
 

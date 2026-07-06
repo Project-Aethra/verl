@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # # Tests layout
 
 # Each folder under tests/ corresponds to a test category for a sub-namespace in verl. For instance:
@@ -65,7 +66,8 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
+    timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
       mlp-task-id: ${{ steps.create-runner.outputs.mlp-task-id }}
@@ -122,7 +124,8 @@ jobs:
           ROLLOUT_NAME=vllm pytest -s -x tests/experimental/reward_loop/test_agent_reward_loop_colocate.py
 
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: magnon-enterprise-runners
+    timeout-minutes: 30
     needs: [setup, reward_model_vllm]
     if: always()
     steps:

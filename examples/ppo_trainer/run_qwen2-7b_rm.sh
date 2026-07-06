@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 # Discliamer: the model used in the script is only for academic purpose.
 set -x
 

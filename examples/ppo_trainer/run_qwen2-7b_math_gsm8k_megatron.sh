@@ -1,3 +1,4 @@
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -x
 
 export CUDA_DEVICE_MAX_CONNECTIONS=1 # For megatron communication/computation overlapping

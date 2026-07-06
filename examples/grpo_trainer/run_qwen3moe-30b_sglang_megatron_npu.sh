@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright (c) Magnon Compute Corporation. All rights reserved.
 set -xeuo pipefail
 # Project Configuration
 project_name='DAPO-Qwen3-30b-A3B-BASE-MATH'
