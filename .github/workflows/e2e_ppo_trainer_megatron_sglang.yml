@@ -93,7 +93,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
@@ -190,7 +190,7 @@ jobs:
           rm -rf checkpoints
 
   cleanup:
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     needs:
       [setup, e2e_ppo_trainer_megatron-deepseek, e2e_ppo_trainer_megatron-qwen3]

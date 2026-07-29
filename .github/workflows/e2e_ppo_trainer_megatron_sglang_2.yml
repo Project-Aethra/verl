@@ -93,7 +93,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
@@ -190,7 +190,7 @@ jobs:
             bash tests/special_e2e/ppo_trainer/run_function_reward.sh
 
   cleanup:
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     needs:
       [setup, e2e_ppo_trainer_fsdp-qwen2_5vl-3b, e2e_ppo_trainer_fsdp_sglang]

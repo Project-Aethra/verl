@@ -69,7 +69,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
@@ -174,7 +174,7 @@ jobs:
           pytest -s -x tests/models/test_engine.py
 
   cleanup:
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     needs: [setup, model_rmpad, model_rmpad_fsdp2_unstable, model_engine]
     if: always()
