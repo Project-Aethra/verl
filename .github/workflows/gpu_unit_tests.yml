@@ -77,7 +77,7 @@ env:
 jobs:
   setup:
     if: github.repository_owner == 'verl-project'
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     outputs:
       runner-label: ${{ steps.create-runner.outputs.runner-label }}
@@ -127,7 +127,7 @@ jobs:
           torchrun --standalone --nnodes=1 --nproc-per-node=2 tests/workers/critic/test_special_dp_critic.py
 
   cleanup:
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 30
     needs: [setup, gpu_unit_tests]
     if: always()

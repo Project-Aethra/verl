@@ -23,7 +23,7 @@ concurrency:
 jobs:
   build-ascend-image-a3:
     if: ${{ github.event_name != 'pull_request' && github.repository_owner == 'verl-project' }}
-    runs-on: magnon-enterprise-runners
+    runs-on: magnon-enterprise-runners-aethra
     timeout-minutes: 60
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-build-ascend-image-a3
